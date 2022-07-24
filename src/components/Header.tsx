@@ -1,7 +1,8 @@
+import s from './../css/Header.module.css'
+
 export const Header = () => {
     return (
-        <header className="header">
-            <div className="header__wrapper"></div>
+        <header className={s.header}>
         </header>
     )
 }

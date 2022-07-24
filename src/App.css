@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap');
 
+/* for mdn (material design icons) */
+
 @font-face {
     font-family: "Material Design Icons";
     src: url("./fonts/mdi/materialdesignicons-webfont.eot?v=3.9.97");
@@ -21,17 +23,17 @@
 
 /* app */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.5;
     font-family: "Rubik", sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 a {
@@ -56,162 +58,6 @@ a {
     margin-left: auto;
 }
 
-/* sidebar */
-
-.sidebar {
-    min-height: calc(100vh - 70px);
-    background: #191c24;
-    font-weight: normal;
-    padding: 0;
-    width: 244px;
-}
-
-.sidebar__nav {
-    display: flex;
-    list-style: none;
-    overflow: hidden;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 60px;
-}
-
-.sidebar__navItem {
-    padding-right: 20px;
-}
-
-.sidebar__navItem:hover .sidebar__navLink{
-    background: #0f1015;
-    color: #ffffff;
-}
-
-.sidebar__navCategory {
-    line-height: 1;
-    padding: 0.5rem 1.188rem;
-    margin-top: 70px;
-}
-
-.sidebar__navLink {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    padding: 0.8rem 10px 0.8rem 1.188rem;
-    color: #6c7293;
-    height: 46px;
-    border-radius: 0 100px 100px 0;
-    -webkit-transition-duration: 0.45s;
-    -moz-transition-duration: 0.45s;
-    -o-transition-duration: 0.45s;
-    transition-duration: 0.45s;
-    transition-property: color;
-    -webkit-transition-property: color;
-}
-
-
-.sidebar__navItem.active .sidebar__navLink {
-    background: #0f1015;
-    position: relative;
-}
-
-.sidebar__navItem.active .sidebar__navLink:before {
-    content: "";
-    width: 3px;
-    height: 100%;
-    background: #0090e7;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.sidebar__navItem.active .sidebar__menuTitle {
-    color: #ffffff;
-}
-
-.sidebar__navCategory .sidebar__navLink {
-    color: #6c7293;
-    font-weight: 500;
-    font-size: 14px;
-    height: auto;
-    padding-left: 0;
-}
-
-.sidebar__menuIcon {
-    margin-right: 0.5rem;
-    font-size: 0.8125rem;
-    line-height: 1;
-    background: rgba(108, 114, 147, 0.2);
-    width: 31px;
-    height: 31px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-}
-
-.sidebar__menuTitle {
-    color: inherit;
-    display: inline-block;
-    font-size: 0.9375rem;
-    line-height: 1;
-    vertical-align: middle;
-}
-
-.sidebar__menuIcon i {
-    font-size: 0.875rem;
-}
-
-.mdiAccount::before {
-    content: "\F004";
-    color: #8f5fe8;
-}
-
-.mdiCommentOutline::before {
-    content: "\F182";
-    color: #ffab00;
-}
-
-.mdiWindowMaximize::before {
-    content: "\F5AF";
-    color: #fc424a;
-}
-
-.mdiMusicNote::before {
-    content: "\F387";
-    color: #0090e7;
-}
-
-.mdiSettings::before {
-    content: "\F493";
-    color: #00d25b;
-}
-
-
-/* header */
-
-.header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 244px;
-    z-index: 1030;
-    width: 100%;
-    height: 70px;
-    color: #ffffff;
-    background: #191c24;
-    box-shadow: 20px 19px 34px -15px rgb(0 0 0 / 50%);
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* profile */
-
-.profile {
-    background: #000000;
-    padding: 1.875rem 1.75rem;
-    width: 100%;
-}
 
 
 

@@ -1,49 +1,51 @@
+import s from './../css/Sidebar.module.css'
+
 export const Sidebar = () => {
     return (
-        <nav className="sidebar">
-            <div className="sidebar__wrapper">
-                <div className="sidebar__navCategory">
-                    <span className="sidebar__navLink">Navigation</span>
+        <nav className={s.sidebar}>
+            <div className={s.sidebar__wrapper}>
+                <div className={s.sidebar__navCategory}>
+                    <span className={s.sidebar__navLink}>Navigation</span>
                 </div>
-                <ul className="sidebar__nav">
-                    <li className="sidebar__navItem active">
-                        <a className="sidebar__navLink" href="#">
-                            <span className="sidebar__menuIcon">
-                                <i className="mdi mdiAccount"></i>
+                <ul className={s.sidebar__nav}>
+                    <li className={`${s.sidebar__navItem} ${s.active}`}>
+                        <a className={s.sidebar__navLink} href="#">
+                            <span className={s.sidebar__menuIcon}>
+                                <i className={`${s.mdi} ${s.mdiAccount}`}></i>
                             </span>
-                            <span className="sidebar__menuTitle">Profile</span>
+                            <span className={s.sidebar__menuTitle}>Profile</span>
                         </a>
                     </li>
-                    <li className="sidebar__navItem">
-                        <a className="sidebar__navLink" href="#">
-                            <span className="sidebar__menuIcon">
-                                <i className="mdi mdiCommentOutline"></i>
+                    <li className={s.sidebar__navItem}>
+                        <a className={s.sidebar__navLink} href="#">
+                            <span className={s.sidebar__menuIcon}>
+                                <i className={`${s.mdi} ${s.mdiCommentOutline}`}></i>
                             </span>
-                            <span className="sidebar__menuTitle">Messages</span>
+                            <span className={s.sidebar__menuTitle}>Messages</span>
                         </a>
                     </li>
-                    <li className="sidebar__navItem">
-                        <a className="sidebar__navLink" href="#">
-                            <span className="sidebar__menuIcon">
-                                <i className="mdi mdiWindowMaximize"></i>
+                    <li className={s.sidebar__navItem}>
+                        <a className={s.sidebar__navLink} href="#">
+                            <span className={s.sidebar__menuIcon}>
+                                <i className={`${s.mdi} ${s.mdiWindowMaximize}`}></i>
                             </span>
-                            <span className="sidebar__menuTitle">News</span>
+                            <span className={s.sidebar__menuTitle}>News</span>
                         </a>
                     </li>
-                    <li className="sidebar__navItem">
-                        <a className="sidebar__navLink" href="#">
-                            <span className="sidebar__menuIcon">
-                                <i className="mdi mdiMusicNote"></i>
+                    <li className={s.sidebar__navItem}>
+                        <a className={s.sidebar__navLink} href="#">
+                            <span className={s.sidebar__menuIcon}>
+                                <i className={`${s.mdi} ${s.mdiMusicNote}`}></i>
                             </span>
-                            <span className="sidebar__menuTitle">Music</span>
+                            <span className={s.sidebar__menuTitle}>Music</span>
                         </a>
                     </li>
-                    <li className="sidebar__navItem">
-                        <a className="sidebar__navLink" href="#">
-                            <span className="sidebar__menuIcon">
-                                <i className="mdi mdiSettings"></i>
+                    <li className={s.sidebar__navItem}>
+                        <a className={s.sidebar__navLink} href="#">
+                            <span className={s.sidebar__menuIcon}>
+                                <i className={`${s.mdi} ${s.mdiSettings}`}></i>
                             </span>
-                            <span className="sidebar__menuTitle">Settings</span>
+                            <span className={s.sidebar__menuTitle}>Settings</span>
                         </a>
                     </li>
                 </ul>
