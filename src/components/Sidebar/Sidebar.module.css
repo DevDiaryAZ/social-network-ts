@@ -1,11 +1,29 @@
-/* sidebar */
-
 .sidebar {
+    width: 244px;
     min-height: calc(100vh - 70px);
     background: #191c24;
     font-weight: normal;
     padding: 0;
+}
+
+.sidebar__brandWrapper {
     width: 244px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: #191c24;
+    transition: width 0.25s ease, background 0.25s ease;
+}
+
+.sidebar__brand {
+    width: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 0 0 0 1.3rem;
+    margin-right: 0;
 }
 
 .sidebar__nav {
@@ -22,7 +40,7 @@
     padding-right: 20px;
 }
 
-.sidebar__navItem:hover .sidebar__navLink{
+.sidebar__navItem:hover .sidebar__navLink {
     background: #0f1015;
     color: #ffffff;
 }
@@ -30,71 +48,66 @@
 .sidebar__navCategory {
     line-height: 1;
     padding: 0.5rem 1.188rem;
-    margin-top: 70px;
 }
 
 .sidebar__navLink {
+    height: 46px;
     display: flex;
     align-items: center;
     white-space: nowrap;
-    padding: 0.8rem 10px 0.8rem 1.188rem;
     color: #6c7293;
-    height: 46px;
     border-radius: 0 100px 100px 0;
-    -webkit-transition-duration: 0.45s;
-    -moz-transition-duration: 0.45s;
-    -o-transition-duration: 0.45s;
     transition-duration: 0.45s;
     transition-property: color;
-    -webkit-transition-property: color;
+    padding: 0.8rem 10px 0.8rem 1.188rem;
 }
 
 
-.sidebar__navItem.active .sidebar__navLink {
-    background: #0f1015;
+.sidebar__navItem .sidebar__navLink.active {
     position: relative;
+    background: #0f1015;
 }
 
-.sidebar__navItem.active .sidebar__navLink:before {
+.sidebar__navItem .sidebar__navLink.active:before {
     content: "";
     width: 3px;
     height: 100%;
-    background: #0090e7;
     display: inline-block;
     position: absolute;
     left: 0;
     top: 0;
+    background: #0090e7;
 }
 
-.sidebar__navItem.active .sidebar__menuTitle {
+.sidebar__navLink.active .sidebar__menuTitle {
     color: #ffffff;
 }
 
 .sidebar__navCategory .sidebar__navLink {
+    height: auto;
     color: #6c7293;
     font-weight: 500;
     font-size: 14px;
-    height: auto;
     padding-left: 0;
 }
 
 .sidebar__menuIcon {
-    margin-right: 0.5rem;
-    font-size: 0.8125rem;
-    line-height: 1;
-    background: rgba(108, 114, 147, 0.2);
     width: 31px;
     height: 31px;
-    border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
+    font-size: 0.8125rem;
+    line-height: 1;
+    background: rgba(108, 114, 147, 0.2);
+    border-radius: 100%;
+    margin-right: 0.5rem;
 }
 
 .sidebar__menuTitle {
-    color: inherit;
     display: inline-block;
+    color: inherit;
     font-size: 0.9375rem;
     line-height: 1;
     vertical-align: middle;
@@ -102,6 +115,16 @@
 
 .sidebar__menuIcon i {
     font-size: 0.875rem;
+}
+
+.mdi:before {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
 
 .mdiAccount::before {
