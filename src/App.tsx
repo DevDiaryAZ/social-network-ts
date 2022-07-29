@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Route} from "react-router-dom";
+import { HashRouter, Route} from "react-router-dom";
 import {Header} from "./components/Header/Header";
 import {Sidebar} from "./components/Sidebar/Sidebar";
 import {Profile} from "./components/Profile/Profile";
@@ -10,7 +10,7 @@ import {Settings} from "./components/Settings/Settings";
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className="app">
                 <Sidebar/>
                 <div className="pageBody">
@@ -24,7 +24,7 @@ function App() {
                     </main>
                 </div>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 

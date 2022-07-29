@@ -89,9 +89,47 @@ input {
     line-height: 1;
     border-radius: 0.1875rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
 }
 
+.button_blue{
+    color: #fff;
+    background-color: #0090e7;
+}
 
+.button_blue:hover  {
+    color: #fff;
+    background-color: #0078c1;
+    border-color: #0070b4;
+}
+
+.button_grey{
+    background-color: rgba(255, 255, 255, 0.2);
+    background-image: none;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.button_outlineLight{
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn_dark {
+    color: #fff;
+    background-color: #0d0d0d;
+    border-color: #0d0d0d;
+}
+
+.btn_outlineDark {
+    color: #0d0d0d;
+    border-color: #0d0d0d;
+}
+
+.btn_outlineDark:hover {
+    color: #fff;
+    background-color: #0d0d0d;
+    border-color: #0d0d0d;
+}
 
 
 

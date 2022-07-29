@@ -15,7 +15,7 @@
     padding: 1.75rem 1.5625rem;
 }
 
-.searchContainer {
+.search {
     display: flex;
 }
 
@@ -40,8 +40,6 @@
 .searchButton {
     width: 40px;
     position: relative;
-    color: #fff;
-    background-color: #0090e7;
     font-size: 0.9375rem;
     line-height: 1;
     font-weight: normal;
@@ -64,7 +62,8 @@
     font-size: 20px;
     color: #ffffff;
 }
-.mdiAccountSearch{
+
+.mdiAccountSearch {
     position: absolute;
     top: 0;
     left: 0;
@@ -73,4 +72,55 @@
     width: 20px;
     height: 20px;
     margin: auto;
+}
+
+.recipients {
+    margin-top: 20px;
+}
+
+.recipients__nav {
+    display: flex;
+    align-content: center;
+}
+
+.recipients__navItem {
+    width: calc(50% - 5px);
+}
+
+.recipients__navItem:nth-child(1) {
+    margin-right: 10px;
+}
+
+.recipients__button {
+    width: 100%;
+    position: relative;
+    line-height: 20px;
+    padding-left: 20px;
+}
+
+.recipients__button i {
+    position: absolute;
+    top: 0;
+    left: -25px;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-left: 0;
+}
+
+.recipients__button span {
+    position: relative;
+    margin-left: 10px;
+}
+
+.mdiAccountMultiple::before {
+    content: "\F00E";
+    font-size: 20px;
+}
+
+.mdiAccount::before {
+    content: "\F004";
+    font-size: 20px;
 }
