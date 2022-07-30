@@ -1,11 +1,13 @@
+/* dialogs */
+
 .dialogs {
-    padding: 20px;
+    padding: 24px;
     width: 100%;
     display: flex;
 }
 
 .dialogsBody {
-    width: 33.33%;
+    width: calc(40% - 12px);
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
@@ -13,6 +15,7 @@
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
     padding: 1.75rem 1.5625rem;
+    margin-right: 24px;
 }
 
 .search {
@@ -123,4 +126,203 @@
 .mdiAccount::before {
     content: "\F004";
     font-size: 20px;
+}
+
+.recipients__list {
+}
+
+.recipients__item {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    padding: 1rem 0;
+    font-size: .875rem;
+    border-bottom: 1px solid #2c2e33;
+}
+
+.recipients__avatar {
+    position: relative;
+}
+
+.recipients__avatar img {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.recipients__itemContent {
+    line-height: 1;
+    padding-left: 15px;
+}
+
+.recipients__name {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.recipients__time {
+    color: #6c7293;
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.recipients__message {
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #6c7293;
+    font-size: 0.875rem;
+}
+
+/* messages */
+.messages {
+    width: calc(60% - 12px);
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #191c24;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.messages__user {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.75rem 1.5625rem;
+    border-bottom: 1px solid #2c2e33;
+}
+
+.messages__avatar img {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.messages__itemContent {
+    line-height: 1;
+    padding-left: 15px;
+}
+
+.messages__name {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.messages__time {
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #6c7293;
+    font-size: 0.875rem;
+}
+
+.messages__chatContainer {
+    padding: 20px 30px 0;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    border-bottom: 1px solid #2c2e33;
+}
+
+.messages__chatContent > ul > li {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.messages__chatThumb {
+    display: inline-block;
+    vertical-align: top;
+    width: 28px;
+}
+
+.messages__chatThumb img {
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.messages__text {
+    vertical-align: top;
+    width: fit-content;
+    margin-left: 8px;
+    margin-right: 8px;
+    max-width: 380px;
+}
+
+.messages__you, .messages__me {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.messages__me {
+    flex-direction: row-reverse;
+}
+
+.messages__chatsLists span {
+    /*background: #f5f5f5 none repeat scroll 0 0;*/
+    /*border-radius: 7px;*/
+    display: block;
+    font-size: 14px;
+    padding: 12px;
+    flex-wrap: nowrap;
+    border: 1px solid #2c2e33;
+    border-radius: 0.25rem;
+    color: #6c7293;
+
+}
+
+li.messages__me span {
+    /*background: rgba(124, 255, 155, 0.55) none repeat scroll 0 0;*/
+    border-color: #0090e7;
+}
+
+.messages__text {
+    display: inline-block;
+}
+
+.form__wrapper{
+    padding: 1.75rem 1.5625rem;
+    display: flex;
+}
+
+.form__button{
+    width: 62px;
+    margin-left: 12px;
+}
+.form__input{
+    width: calc(100% - 74px);
+    word-wrap: break-word;
 }
