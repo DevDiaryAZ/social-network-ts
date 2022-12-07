@@ -1,10 +1,37 @@
 import s from './Dialogs.module.css'
+import {DialogItem} from "./DialogItem/DialogItem";
+import {Messages} from "./Messages/Messages";
 
 export const Dialogs = () => {
+
+    let dialogsData = [
+        {
+            id: 1,
+            name: "Leonarda Ore",
+            avatar: "https://slepayakurica.ru/local/img/b/150121/di_opt.jpg",
+            absenceTime: "10 Minutes Ago",
+            lastMessage: "Please review the tickets"
+        },
+        {
+            id: 2,
+            name: "Anna Mills",
+            avatar: "https://pressa.tv/uploads/posts/2018-08/1535007604_9.jpg",
+            absenceTime: "5 minutes ago",
+            lastMessage: "Well, it seems to be working now."
+        },
+        {
+            id: 3,
+            name: "Isabel May",
+            avatar: "https://www.zastavki.com/pictures/1600x1200/2020Girls___Models_Beautiful_face_close-up__model_Barbara_Palvin_144354_2.jpg",
+            absenceTime: "4 Hours Ago",
+            lastMessage: "Thanks a lot. It was easy to fix it ."
+        },
+    ]
+
     return (
         <section className={s.dialogs}>
-            {/* Dialogs */}
             <div className={s.dialogsBody}>
+                {/* Dialogs search*/}
                 <div className={s.search}>
                     <input className={s.searchInput} type="text" placeholder="Search"
                     />
@@ -13,6 +40,7 @@ export const Dialogs = () => {
                 </div>
 
                 <div className={s.recipients}>
+                    {/* Dialogs buttons*/}
                     <div className={s.recipients__nav}>
                         <div className={s.recipients__navItem}>
                             <button className={`button btn_dark ${s.recipients__button}`}>
@@ -26,75 +54,18 @@ export const Dialogs = () => {
                         </div>
                     </div>
 
+                    {/* Dialogs list*/}
                     <div className={s.recipients__list}>
-                        <div className={s.recipients__item}>
-                            <div className={s.recipients__avatar}>
-                                <img src="https://pressa.tv/uploads/posts/2018-08/1535007604_9.jpg" alt="image"/>
-                            </div>
-                            <div className={s.recipients__itemContent}>
-                                <div className={s.recipients__nameWrapper}>
-                                    <h6 className={s.recipients__name}>Leonarda</h6>
-                                    <p className={s.recipients__time}>5 minutes ago</p>
-                                </div>
-                                <p className={s.recipients__message}>Well, it seems to be working now.</p>
-                            </div>
-                        </div>
+                        {dialogsData.map((dialog) => <DialogItem id={dialog.id} img={dialog.avatar}
+                                                                 name={dialog.name} time={dialog.absenceTime}
+                                                                 lastMessage={dialog.lastMessage}/>
+                        )}
                     </div>
                 </div>
 
             </div>
 
-            {/* Messages */}
-            <div className={s.messages}>
-                {/* Message header */}
-                <div className={s.messages__user}>
-                    <div className={s.messages__avatar}>
-                        <img src="https://pressa.tv/uploads/posts/2018-08/1535007604_9.jpg" alt="image"/>
-                    </div>
-                    <div className={s.messages__itemContent}>
-                        <div className={s.messages__nameWrapper}>
-                            <h6 className={s.messages__name}>Leonarda</h6>
-                            <p className={s.messages__time}>5 minutes ago</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Message chat */}
-                <div className={s.messages__chatContainer}>
-                    <div className={s.messages__chatContent}>
-                        <ul className={s.messages__chatsLists}>
-                            <li className={s.messages__you}>
-                                <div className={s.messages__chatThumb}>
-                                    <img src="https://pressa.tv/uploads/posts/2018-08/1535007604_9.jpg" alt=""/>
-                                </div>
-                                <div className={s.messages__text}>
-                                    <span>
-                                    Hi, Peter, How are you today?.
-                                    </span>
-                                </div>
-                            </li>
-                            <li className={s.messages__me}>
-                                <div className={s.messages__chatThumb}>
-                                    <img src="https://lofficiel.imgix.net/production/russia/images/1531997317085199-b66a7d6e3d6f3d27fa5fd8531f8e8fe3.jpg?w=450&h=800&fit=clip&crop=faces&auto=%5B%22format%22%2C%20%22compress%22%5D&cs=srgb" alt=""/>
-                                </div>
-                                <div className={s.messages__text}>
-                                    <span>
-                                    Hi, Leo, I am fine but about you?
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                {/* Message form */}
-                <form>
-                    <div className={s.form__wrapper}>
-                        <input type="text" className={`input ${s.form__input}`}/>
-                        <button type="submit" className={`button button_blue ${s.form__button}`}>Send</button>
-                    </div>
-                </form>
-            </div>
+            <Messages/>
         </section>
     )
 }
